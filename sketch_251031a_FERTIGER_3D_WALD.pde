@@ -217,6 +217,13 @@ else if ((pot1 >= 768 && pot1 <= 1023) &&
   fraction = 0.8; // high fire
 }
 
+// Rule 5
+if ((pot1 >= 0 && pot1 <= 255) &&
+    ((pot2 >= 767 && pot2 <= 1023)))
+     {
+  fraction = 0.7; // strong fire
+}
+
 // Otherwise, fire dies out
 else {
   fraction = 0.0;
